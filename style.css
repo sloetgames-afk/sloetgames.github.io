@@ -30,6 +30,7 @@ body {
 
 .logo-area {
     margin-right: 15px;
+    position: relative;
     margin-top: -4px;
 }
 
