@@ -1,212 +1,125 @@
-/* --- RESET BÁSICO --- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* --- VARIABLES DE COLOR (Estilo Rockstar/Gaming) --- */
-:root {
-    --bg-dark: #121212;
-    --bg-darker: #080808;
-    --bg-header: #000000;
-    --text-light: #e0e0e0;
-    --text-dim: #cccccc;
-    --accent-gold: #ffcc00; /* Color de acento principal */
-    --border-color: #333;
-}
-
-/* --- ESTILO GENERAL --- */
 body {
-    background-color: var(--bg-dark);
-    color: var(--text-light);
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    line-height: 1.6;
-    font-size: 16px;
-    overflow-x: hidden; /* Evitar scroll horizontal en móviles */
+    background-color: #0d0d0d;
+    color: #ffffff;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.5;
+    padding: 40px 20px;
 }
 
-/* --- ENCABEZADO Y LOGO GLOW --- */
-header {
-    background-color: var(--bg-header);
-    padding: 15px 0;
-    border-bottom: 2px solid var(--border-color);
+.main-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header-content {
     display: flex;
-    justify-content: center;
     align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    gap: 15px;
 }
 
-/* Contenedor cuadrado para el logo con efecto glow */
-.logo-glow-container {
-    width: 80px;  /* Tamaño del cuadrado */
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 12px; /* Bordes ligeramente redondeados estilo moderno */
-    background-color: #0a0a0a;
-    padding: 5px;
-    /* Animación del resplandor */
-    animation: slowGlow 4s infinite alternate ease-in-out;
+.top-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
 }
 
-/* La imagen del logo */
-.logo-glow-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* Asegura que el logo se vea completo dentro del cuadro */
-}
-
-/* Definición de la animación de resplandor lento */
-@keyframes slowGlow {
-    0% {
-        box-shadow: 0 0 5px rgba(255, 204, 0, 0.1), inset 0 0 5px rgba(255, 204, 0, 0.1);
-        border: 1px solid rgba(255, 204, 0, 0.2);
-    }
-    100% {
-        box-shadow: 0 0 20px rgba(255, 204, 0, 0.4), inset 0 0 10px rgba(255, 204, 0, 0.3);
-        border: 1px solid rgba(255, 204, 0, 0.6);
-    }
-}
-
-/* --- CONTENEDOR PRINCIPAL DEL TEXTO --- */
-.container {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 0 25px; /* Un poco más de padding lateral para móviles */
-}
-
-/* --- TIPOGRAFÍA Y ELEMENTOS --- */
 h1 {
-    font-size: 42px;
-    font-weight: 700;
-    margin-bottom: 10px;
-    color: #ffffff;
-    text-transform: uppercase;
-    letter-spacing: -1px;
-}
-
-.last-updated {
-    font-size: 14px;
-    color: #888;
-    margin-bottom: 40px;
-    display: block;
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 20px;
-}
-
-h2 {
     font-size: 24px;
-    color: #ffffff;
-    margin-top: 45px;
-    margin-bottom: 20px;
-    border-left: 4px solid var(--accent-gold);
-    padding-left: 15px;
+    letter-spacing: 0.5px;
+}
+
+.subtitle {
+    color: #888;
+    font-size: 14px;
+}
+
+.update-bar {
+    margin-top: 15px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+    font-size: 12px;
+    color: #bbb;
+}
+
+/* Secciones */
+h2 {
+    font-size: 20px;
+    margin: 40px 0 20px;
+    border-left: 4px solid #fff;
+    padding-left: 10px;
 }
 
 h3 {
-    font-size: 18px;
-    color: #ffffff;
-    margin-top: 30px;
-    margin-bottom: 15px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #fff;
 }
 
 p {
-    margin-bottom: 20px;
-    color: var(--text-dim);
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 15px;
+    text-align: justify;
 }
 
 ul {
     margin-bottom: 20px;
-    padding-left: 25px;
+    list-style: none;
 }
 
 li {
-    margin-bottom: 10px;
-    color: var(--text-dim);
+    font-size: 14px;
+    color: #ccc;
+    padding-left: 15px;
+    position: relative;
+    margin-bottom: 5px;
 }
 
-/* --- ENLACES GENERALES --- */
-a {
-    color: var(--accent-gold);
-    text-decoration: none;
-    transition: all 0.3s ease;
+li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #fff;
 }
 
-a:hover {
-    color: #ffffff;
-}
-
-/* --- PIE DE PÁGINA Y REDES SOCIALES --- */
-footer {
-    background-color: var(--bg-darker);
-    padding: 50px 20px 30px;
-    text-align: center;
-    border-top: 2px solid var(--border-color);
-    margin-top: 80px;
-    font-size: 13px;
-    color: #666;
-}
-
-footer p {
-    margin-bottom: 15px;
-    color: #777;
-}
-
-.footer-links {
+.legal-item {
     margin-bottom: 30px;
 }
 
-.footer-links a {
-     margin: 0 10px;
-     font-weight: bold;
+.divider {
+    height: 1px;
+    background: #333;
+    margin: 40px 0;
 }
 
-/* Sección de Iconos Sociales */
-.social-links {
+/* Footer */
+footer {
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.social-circles {
     display: flex;
     justify-content: center;
-    gap: 25px; /* Espacio entre iconos */
-    margin-top: 35px;
-    padding-top: 25px;
-    border-top: 1px solid #222;
-    flex-wrap: wrap; /* Permite que bajen en pantallas muy pequeñas */
+    gap: 15px;
+    margin-bottom: 20px;
 }
 
-.social-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    color: var(--accent-gold); /* Color inicial del icono */
-    transition: transform 0.2s, color 0.3s;
+.circle {
+    width: 45px;
+    height: 45px;
+    background: #fff;
+    border-radius: 50%;
 }
 
-/* SVG Styling */
-.social-icon svg {
-    width: 24px;
-    height: 24px;
-    fill: currentColor; /* El SVG toma el color del texto del padre */
-}
-
-.social-icon:hover {
-    color: #ffffff; /* Color al pasar el mouse */
-    transform: translateY(-3px); /* Pequeño efecto de elevación */
-}
-
-/* --- RESPONSIVE (Móviles) --- */
-@media (max-width: 768px) {
-    h1 { font-size: 32px; }
-    .container { margin: 30px auto; }
-    
-    /* Ajustar tamaño del logo en móviles si es necesario */
-    .logo-glow-container {
-        width: 60px;
-        height: 60px;
-    }
-    h2 { font-size: 22px; margin-top: 35px;}
+.copyright {
+    font-size: 12px;
+    color: #555;
 }
