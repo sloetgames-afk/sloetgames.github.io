@@ -21,39 +21,52 @@ body {
     padding-bottom: 50px;
 }
 
-/* Encabezado */
+/* --- ENCABEZADO CORREGIDO --- */
 .header {
     display: flex;
-    align-items: center;
+    align-items: center; /* Esto asegura que el centro del logo y el texto estén alineados */
+    justify-content: flex-start;
+    gap: 15px; /* Espacio uniforme entre el logo y el texto */
     margin-bottom: 20px;
 }
 
 .logo-area {
-    margin-right: 15px;
-    position: relative;
-    margin-top: -25px;
+    /* Eliminé los márgenes negativos que desalineaban el logo */
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
 .logo-img {
-    width: 50px; /* Un poco más pequeño para móviles */
-    height: auto;
+    width: 50px; 
+    height: 50px; /* Definir altura igual al ancho ayuda a la alineación */
+    object-fit: cover;
     display: block;
     border-radius: 8px;
 }
 
+.title-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el bloque de texto verticalmente */
+}
+
 .title-area h1 {
-    font-size: 1.3rem; /* Ajustado para caber mejor */
+    font-size: 1.3rem;
     font-weight: 700;
     color: #ffffff;
     letter-spacing: 0.5px;
-    line-height: 1.2;
+    line-height: 1.1; /* Línea más ajustada */
+    margin: 0; /* Importante: quita el espacio extra arriba/abajo del título */
 }
 
 .subtitle {
     font-size: 0.85rem;
     color: #b0b0b0;
     margin-top: 2px;
+    line-height: 1.2;
 }
+/* ---------------------------- */
 
 /* Barra de fecha */
 .update-bar {
