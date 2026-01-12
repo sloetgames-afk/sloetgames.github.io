@@ -1,6 +1,18 @@
-/* Sloet Games™ - Script Principal
-   Actualmente el diseño es CSS puro, pero este archivo está listo
-   para agregar interactividad en el futuro.
-*/
+// Este script permite que la página tenga pequeñas interacciones 
+// y prepara el terreno para futuras funciones.
 
-console.log("Sloet Games web cargada correctamente.");
+document.addEventListener('DOMContentLoaded', () => {
+    console.log("Documento Legal de Sloet Games™ cargado correctamente.");
+
+    // Ejemplo: Al hacer clic en el correo, se copia al portapapeles
+    const emailLinks = document.querySelectorAll('strong');
+    emailLinks.forEach(link => {
+        if(link.innerText.includes('@')) {
+            link.style.cursor = 'pointer';
+            link.title = 'Haz clic para contactar';
+            link.addEventListener('click', () => {
+                window.location.href = `mailto:${link.innerText}`;
+            });
+        }
+    });
+});
