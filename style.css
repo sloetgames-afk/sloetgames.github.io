@@ -33,8 +33,10 @@ body {
 .logo-area {
     /* Eliminé los márgenes negativos que desalineaban el logo */
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     height: 100%;
+}
+
 }
 
 .logo-img {
