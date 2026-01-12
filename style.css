@@ -43,6 +43,7 @@ body {
     object-fit: cover;
     display: block;
     border-radius: 8px;
+    transform: translateY(3px);
 }
 
 .title-area {
