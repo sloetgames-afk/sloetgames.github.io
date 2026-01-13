@@ -52,7 +52,7 @@ body {
     font-size: 1.3rem;
     font-weight: 700;
     color: #ffffff;
-    margin: 0; /* Quita el margen por defecto para pegarlo al subtítulo */
+    margin: 10; /* Quita el margen por defecto para pegarlo al subtítulo */
     line-height: 1.1;
 }
 
