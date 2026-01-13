@@ -1,176 +1,159 @@
 /* Reset básico */
-
-{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-
 body {
-background-color: #121212;
-color: #e0e0e0;
-font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-line-height: 1.6;
-font-size: 16px;
-/* Reduje el padding para que no robe tanto espacio en pantallas pequeñas */
-padding: 15px;
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    font-size: 16px;
+    /* Reduje el padding para que no robe tanto espacio en pantallas pequeñas */
+    padding: 15px;
 }
 
 .main-container {
-max-width: 600px;
-margin: 0 auto;
-padding-bottom: 50px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-bottom: 50px;
 }
 
-/* --- ENCABEZADO CORREGIDO --- /
+/* Encabezado */
 .header {
-display: flex;
-align-items: center; / Esto asegura que el centro del logo y el texto estén alineados /
-justify-content: flex-start;
-gap: 15px; / Espacio uniforme entre el logo y el texto */
-margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
 .logo-area {
-/* Eliminé los márgenes negativos que desalineaban el logo */
-display: flex;
-align-items: center;
-height: 100%;
+    margin-right: 15px;
 }
 
 .logo-img {
-width: 50px;
-height: 50px; /* Definir altura igual al ancho ayuda a la alineación */
-object-fit: cover;
-display: block;
-border-radius: 8px;
-}
-
-.title-area {
-display: flex;
-flex-direction: column;
-justify-content: center; /* Centra el bloque de texto verticalmente */
+    width: 50px; /* Un poco más pequeño para móviles */
+    height: auto;
+    display: block;
+    border-radius: 8px;
 }
 
 .title-area h1 {
-font-size: 1.3rem;
-font-weight: 700;
-color: #ffffff;
-letter-spacing: 0.5px;
-line-height: 1.1; /* Línea más ajustada /
-margin: 0; / Importante: quita el espacio extra arriba/abajo del título */
+    font-size: 1.3rem; /* Ajustado para caber mejor */
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
 }
 
 .subtitle {
-font-size: 0.85rem;
-color: #b0b0b0;
-margin-top: 2px;
-line-height: 1.2;
+    font-size: 0.85rem;
+    color: #b0b0b0;
+    margin-top: 2px;
 }
-/* ---------------------------- */
 
 /* Barra de fecha */
 .update-bar {
-border-bottom: 1px solid #444;
-padding-bottom: 8px;
-margin-bottom: 25px;
-font-size: 0.85rem;
-color: #ccc;
+    border-bottom: 1px solid #444;
+    padding-bottom: 8px;
+    margin-bottom: 25px;
+    font-size: 0.85rem;
+    color: #ccc;
 }
 
 /* Separador entre secciones grandes */
 .divider {
-border: 0;
-height: 1px;
-background: #333;
-margin: 35px 0;
+    border: 0;
+    height: 1px;
+    background: #333;
+    margin: 35px 0;
 }
 
 /* Tipografía */
 h2 {
-font-size: 1.4rem;
-color: #ffffff;
-margin-bottom: 15px;
-margin-top: 10px;
-font-weight: 700;
+    font-size: 1.4rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    font-weight: 700;
 }
 
 h3 {
-font-size: 1.1rem;
-color: #ffffff;
-margin-top: 25px;
-margin-bottom: 10px;
-font-weight: 700;
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-weight: 700;
 }
 
 p {
-margin-bottom: 15px;
-color: #d1d1d1;
-/* IMPORTANTE: text-align left evita que el texto se separe feo en móviles */
-text-align: left;
+    margin-bottom: 15px;
+    color: #d1d1d1;
+    /* IMPORTANTE: text-align left evita que el texto se separe feo en móviles */
+    text-align: left; 
 }
 
 /* Listas */
 ul {
-list-style-type: disc;
-padding-left: 20px;
-margin-bottom: 15px;
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 15px;
 }
 
 li {
-margin-bottom: 8px;
-color: #d1d1d1;
-text-align: left;
+    margin-bottom: 8px;
+    color: #d1d1d1;
+    text-align: left;
 }
 
 strong {
-color: #ffffff;
+    color: #ffffff;
 }
 
 /* Footer */
 .footer {
-margin-top: 50px;
-text-align: center;
-border-top: 1px solid #333;
-padding-top: 30px;
+    margin-top: 50px;
+    text-align: center;
+    border-top: 1px solid #333;
+    padding-top: 30px;
 }
 
 .footer-icons {
-display: flex;
-justify-content: center;
-gap: 20px; /* Espacio entre iconos */
-margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre iconos */
+    margin-bottom: 20px;
 }
 
 /* Estilo para los iconos de redes sociales */
 .social-link {
-display: inline-flex;
-align-items: center;
-justify-content: center;
-width: 40px;
-height: 40px;
-transition: transform 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    transition: transform 0.2s ease;
 }
 
 .social-link svg {
-width: 24px;
-height: 24px;
-fill: #ffffff; /* Color del icono blanco */
-transition: fill 0.2s ease;
+    width: 24px;
+    height: 24px;
+    fill: #ffffff; /* Color del icono blanco */
+    transition: fill 0.2s ease;
 }
 
 /* Efecto al tocar o pasar el mouse */
 .social-link:hover {
-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .social-link:hover svg {
-fill: #b0b0b0; /* Un gris claro al seleccionar */
+    fill: #b0b0b0; /* Un gris claro al seleccionar */
 }
 
 .copyright {
-font-size: 0.85rem;
-color: #777;
-text-align: center;
+    font-size: 0.85rem;
+    color: #777;
+    text-align: center;
 }
