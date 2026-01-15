@@ -24,7 +24,7 @@ body {
 /* Encabezado */
 .header {
     display: flex;
-    align-items: center; /* Esto es lo más importante: centra verticalmente logo y texto */
+    align-items: center; /* Mantiene una base centrada, pero la modificaremos abajo */
     margin-bottom: 25px;
 }
 
@@ -32,8 +32,14 @@ body {
     margin-right: 15px;
     flex-shrink: 0;
     display: flex; 
-    align-items: center; /* Asegura que la imagen esté centrada en su propia caja */
-    height: 100%;       /* Asegura que tome la altura disponible si es necesario */
+    align-items: center;
+    
+    /* --- ZONA DE CONTROL MANUAL DEL LOGO --- */
+    position: relative; 
+    /* Cambia este número para subir o bajar SOLO EL LOGO */
+    /* -5px sube, 5px baja. 0px lo deja en el centro */
+    top: 0px; 
+    /* --------------------------------------- */
 }
 
 .logo-img {
@@ -46,8 +52,15 @@ body {
 
 .title-area {
     display: flex;
-    flex-direction: column; /* Apila título y subtítulo */
-    justify-content: center; /* Centra el bloque de texto verticalmente respecto al logo */
+    flex-direction: column;
+    justify-content: center;
+
+    /* --- ZONA DE CONTROL MANUAL DEL TEXTO --- */
+    position: relative;
+    /* Cambia este número para subir o bajar TODO EL TEXTO (título + subtítulo) */
+    /* -5px sube, 5px baja. 0px lo deja en el centro */
+    top: 2px; 
+    /* ---------------------------------------- */
 }
 
 .title-area h1 {
@@ -56,14 +69,12 @@ body {
     color: #ffffff;
     margin: 0;
     line-height: 1.1;
-    /* Un pequeño ajuste negativo si sientes que el texto se ve muy abajo ópticamente */
     margin-bottom: 2px; 
 }
 
 .subtitle {
     font-size: 0.85rem;
     color: #b0b0b0;
-    /* Reduje el margen superior de 4px a 0px para que el bloque de texto sea más compacto y centre mejor con el logo */
     margin-top: 0; 
     line-height: 1.2;
     font-weight: 400;
