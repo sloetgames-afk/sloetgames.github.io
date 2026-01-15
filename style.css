@@ -24,14 +24,16 @@ body {
 /* Encabezado */
 .header {
     display: flex;
-    align-items: center; /* Centra verticalmente el logo con el texto */
+    align-items: center; /* Esto es lo más importante: centra verticalmente logo y texto */
     margin-bottom: 25px;
 }
 
 .logo-area {
     margin-right: 15px;
-    flex-shrink: 0; /* IMPORTANTE: Evita que el logo se aplaste en móviles */
-    display: flex;
+    flex-shrink: 0;
+    display: flex; 
+    align-items: center; /* Asegura que la imagen esté centrada en su propia caja */
+    height: 100%;       /* Asegura que tome la altura disponible si es necesario */
 }
 
 .logo-img {
@@ -45,21 +47,24 @@ body {
 .title-area {
     display: flex;
     flex-direction: column; /* Apila título y subtítulo */
-    justify-content: center;
+    justify-content: center; /* Centra el bloque de texto verticalmente respecto al logo */
 }
 
 .title-area h1 {
     font-size: 1.3rem;
     font-weight: 700;
     color: #ffffff;
-    margin: 0; /* Quita el margen por defecto para pegarlo al subtítulo */
+    margin: 0;
     line-height: 1.1;
+    /* Un pequeño ajuste negativo si sientes que el texto se ve muy abajo ópticamente */
+    margin-bottom: 2px; 
 }
 
 .subtitle {
     font-size: 0.85rem;
     color: #b0b0b0;
-    margin-top: 4px;
+    /* Reduje el margen superior de 4px a 0px para que el bloque de texto sea más compacto y centre mejor con el logo */
+    margin-top: 0; 
     line-height: 1.2;
     font-weight: 400;
 }
