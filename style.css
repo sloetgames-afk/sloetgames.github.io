@@ -59,7 +59,7 @@ body {
     position: relative;
     /* Cambia este número para subir o bajar TODO EL TEXTO (título + subtítulo) */
     /* -5px sube, 5px baja. 0px lo deja en el centro */
-    top: 2px; 
+    top: 3px; 
     /* ---------------------------------------- */
 }
 
